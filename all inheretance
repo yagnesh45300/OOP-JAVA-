@@ -1,0 +1,110 @@
+1. Single Inheritance
+
+java
+Edit
+Copy code
+class Animal { 
+    void eat() { System.out.println("Eating..."); } 
+} 
+
+class Dog extends Animal { 
+    void bark() { System.out.println("Barking..."); } 
+}
+2. Multilevel Inheritance
+
+java
+Edit
+Copy code
+class Animal { 
+    void eat() { System.out.println("Eating..."); } 
+} 
+
+class Dog extends Animal { 
+    void bark() { System.out.println("Barking..."); } 
+} 
+
+class GoldenRetriever extends Dog { 
+    void fetch() { System.out.println("Fetching..."); } 
+}
+3. Hierarchical Inheritance
+
+java
+Edit
+Copy code
+class Animal { 
+    void eat() { System.out.println("Eating..."); } 
+} 
+
+class Dog extends Animal { 
+    void bark() { System.out.println("Barking..."); } 
+} 
+
+class Cat extends Animal { 
+    void meow() { System.out.println("Meowing..."); } 
+}
+4. Multiple Inheritance (not directly supported in Java, but can be achieved using interfaces)
+
+java
+Edit
+Copy code
+interface Flyable { 
+    void fly(); 
+} 
+
+interface Walkable { 
+    void walk(); 
+} 
+
+class Bird implements Flyable, Walkable { 
+    public void fly() { System.out.println("Flying..."); } 
+    public void walk() { System.out.println("Walking..."); } 
+}
+5. Hybrid Inheritance (combination of multiple and multilevel inheritance, not directly supported in Java) Not applicable in Java, as multiple inheritance is not directly supported.
+
+Note: Java does not support multiple inheritance of classes, but it does support multiple inheritance of interfaces.
+
+
+multiple inheritance in java code
+
+
+Here is an example of multiple inheritance in Java using interfaces:
+
+java
+Edit
+Copy code
+// Interfaces
+interface Flyable {
+    void fly();
+}
+
+interface Walkable {
+    void walk();
+}
+
+interface Swimmable {
+    void swim();
+}
+
+// Class implementing multiple interfaces
+class Duck implements Flyable, Walkable, Swimmable {
+    public void fly() {
+        System.out.println("Flying...");
+    }
+
+    public void walk() {
+        System.out.println("Walking...");
+    }
+
+    public void swim() {
+        System.out.println("Swimming...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Duck duck = new Duck();
+        duck.fly();
+        duck.walk();
+        duck.swim();
+    }
+}
